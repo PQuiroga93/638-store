@@ -3,6 +3,8 @@ const express = require('express');
 const productosRoutes = require('./routes/productos.routes');
 const categoriasRoutes = require('./routes/categorias.routes');
 const colorRoutes = require('./routes/color.routes');
+const productoDetalleRoutes = require('./routes/productoDetalle.routes');
+
 const errorHandler = require('./middlewares/errorHandler');
 
 const app = express();
@@ -10,6 +12,7 @@ app.use(express.json());
 app.use('/productos', productosRoutes);
 app.use('/categorias', categoriasRoutes);
 app.use('/color', colorRoutes);
+app.use('/producto-detalle', productoDetalleRoutes);
 
 app.use(errorHandler); // Siempre al final
 
