@@ -5,6 +5,8 @@ const productosRoutes = require('./routes/productos.routes');
 const categoriasRoutes = require('./routes/categorias.routes');
 const colorRoutes = require('./routes/color.routes');
 const productoDetalleRoutes = require('./routes/productoDetalle.routes');
+const trabajoRealizadoRoutes = require('./routes/trabajoRealizado.routes');
+
 
 const errorHandler = require('./middlewares/errorHandler');
 
@@ -15,6 +17,7 @@ app.use('/productos', productosRoutes);
 app.use('/categorias', categoriasRoutes);
 app.use('/color', colorRoutes);
 app.use('/producto-detalle', productoDetalleRoutes);
+app.use('/trabajo-realizado', trabajoRealizadoRoutes);
 
 app.use(errorHandler); // Siempre al final
 
